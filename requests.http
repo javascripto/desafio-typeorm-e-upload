@@ -1,0 +1,37 @@
+GET http://localhost:3333/transactions
+
+###
+POST http://localhost:3333/transactions
+Content-Type: application/json
+
+{
+  "title": "Hamburguer",
+  "type": "outcome",
+  "category": "Comida",
+  "value": 123
+}
+
+
+###
+POST http://localhost:3333/transactions
+Content-Type: application/json
+
+{
+  "title": "Pagamento",
+  "type": "income",
+  "category": "Deposito",
+  "value": 2000
+}
+
+###
+# @name uploadCSV
+POST http://localhost:3333/transactions/import
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file.csv"
+Content-Type: image/png
+
+< ./src/__tests__/import_template.csv
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
