@@ -8,7 +8,7 @@ Content-Type: application/json
   "title": "Hamburguer",
   "type": "outcome",
   "category": "Comida",
-  "value": 123
+  "value": 80
 }
 
 
